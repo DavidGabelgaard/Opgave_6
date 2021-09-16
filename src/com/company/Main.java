@@ -21,23 +21,22 @@ public class Main {
 
     public static void squareRoot(double x) {
 
-        double Guess = x / 2.0;
+        double Guess = x / 2.0; // TODO Guess skal være med småt
         double difference = 1;
 
 
         while (difference > 0.0001) {
-            double OldGuess = Guess;
+            double OldGuess = Guess; // TODO OldGuess skal være med småt
             Guess = (Guess + x / Guess) / 2.0;
             difference =  Math.abs (Math.abs(OldGuess) -Math.abs(Guess));
             System.out.println(Guess);
         }
     }
 
-
+    // TODO Lav den lige aLLIGEVE
     public static void gauss(double x , int n) {
 
         // n can't be one
-
         for (int i = 0; i < n - 1 ; i++) {
         }
 
@@ -47,7 +46,7 @@ public class Main {
 
 
     public static boolean isDoubloon(String s) {
-
+        // DER SKAL IKKE VÆRE -1 
         for (int i = 0; i < s.length() - 1 ; i++) {
             int lastChar;
             int currChar = s.indexOf(i);
@@ -67,6 +66,7 @@ public class Main {
 
     public static boolean canSpell(String tiles, String word) {
 
+        // TODO OBS MED SMÅT
         boolean TileMissing = false;
 
         List<Character> CTiles = new ArrayList<>();
